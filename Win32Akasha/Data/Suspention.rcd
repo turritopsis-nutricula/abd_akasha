@@ -1,0 +1,32 @@
+  Val{
+	  A_HANDLE(default=0, min=-15, max=15,step=2)
+	  P_ACCEL(default=0, min=-5000,max=5000, step=100)
+	  S_SUS(default=0.004)
+	  D_SUS(default=0.001)
+  }
+
+  Key{
+	  7:A_HANDLE(step=-1.4)
+	  9:A_HANDLE(step=1.4)
+	  15:P_ACCEL(step=100)
+	  8:P_ACCEL(step=100)
+  }
+
+  Body{
+	  Core(){
+		  N:Chip(){
+			  N:Rudder(angle=A_HANDLE){
+				  S:Chip(name=N_FRONT,angle=-90){}
+				  W:Chip(spring=S_SUS, damper=D_SUS){W:Chip(angle=-90, spring=0, damper=0,link=N_FRONT){ E:Wheel(){} }}
+				  E:Chip(spring=S_SUS, damper=D_SUS){E:Chip(angle=-90, spring=0, damper=0,link=N_FRONT){ W:Wheel(){} }}
+			  }
+		  }
+
+		  S:Chip(){
+
+				  N:Chip(name=N_REAR,angle=-90){}
+				  W:Chip(spring=S_SUS, damper=D_SUS){W:Chip(angle=-90, spring=0, link=N_REAR){ E:Wheel(power=P_ACCEL){} }}
+				  E:Chip(spring=S_SUS, damper=D_SUS){E:Chip(angle=-90, spring=0, link=N_REAR){ W:Wheel(power=-P_ACCEL){} }}
+		  }
+	  }
+  }

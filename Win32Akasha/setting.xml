@@ -1,0 +1,182 @@
+<!-- 識別文字 -->
+<MIZUNUKI>
+	<MajorVersion>0</MajorVersion>
+	<MinorVersion>6</MinorVersion>
+	<Revision>0</Revision>
+	<AbbCodeName>S.KANNA</AbbCodeName>
+	<CodeName>SHIORI &quot;TenderTentacle&quot; KANNA</CodeName>
+
+	<InitModelPosition>0.05</InitModelPosition>
+
+	<Physics>
+		<Global>
+			<numIterations>20</numIterations>
+			<splitImpulsePenetrationThreshold>-0.002</splitImpulsePenetrationThreshold>
+			<erp>0.1</erp>
+			<erp2>0.95</erp2>
+			<globalCfm>0.01</globalCfm>
+			<linearSlop>-0.015</linearSlop>
+			<damping>1.0</damping>
+		</Global>
+		<Model>
+			<Elements>
+				<!-- Core-->
+				<element type="0">
+					<mass>25</mass>
+					<breakImpulse>10.0</breakImpulse>
+				</element>
+
+				<!-- Chip -->
+				<element type="1">
+					<mass>25</mass>
+					<breakImpulse>25.0</breakImpulse>
+					<!-- peaker over 350 -->
+					<connectStiffness>200.0</connectStiffness>
+					<connectDamper>1000.0</connectDamper>
+				</element>
+
+				<!-- Rudder  -->
+				<element type="2">
+					<mass>25</mass>
+					<breakImpulse>25.0</breakImpulse>
+					<connectStiffness>320.0</connectStiffness>
+					<connectDamper>1000.0</connectDamper>
+				</element>
+
+				<!-- Trim -->
+				<element type="6">
+					<mass>25</mass>
+					<breakImpulse>25.0</breakImpulse>
+					<connectStiffness>320.0</connectStiffness>
+					<connectDamper>1000.0</connectDamper>
+				</element>
+
+				<!-- Rim -->
+				<element type="3">
+					<mass>50</mass>
+					<breakImpulse>20.0</breakImpulse>
+					<connectStiffness>300.0</connectStiffness>
+					<connectDamper>1000.0</connectDamper>
+				</element>
+
+				<!-- Wheel -->
+				<element type="4">
+					<mass>75</mass>
+					<breakImpulse>4.0</breakImpulse>
+				</element>
+
+				<!-- Jet -->
+				<element type="7">
+					<mass>36.75</mass>
+					<breakImpulse>8.0</breakImpulse>
+					<connectStiffness>400.0</connectStiffness>
+					<connectDamper>100.0</connectDamper>
+				</element>
+
+				<!-- Weight -->
+				<element type="8">
+					<mass>100.0</mass>
+					<breakImpulse>80.0</breakImpulse>
+				</element>
+				<!-- Arm -->
+				<element type="10">
+					<mass>50.0</mass>
+					<breakImpulse>8.0</breakImpulse>
+					<connectStiffness>400.0</connectStiffness>
+					<connectDamper>100.0</connectDamper>
+				</element>
+
+				<!-- Frame -->
+				<element type="33">
+					<mass>12.5</mass>
+					<breakImpulse>20.0</breakImpulse>
+					<connectStiffness>200.0</connectStiffness>
+					<connectDamper>100.0</connectDamper>
+				</element>
+
+				<!-- RudderFrame -->
+				<element type="34">
+					<mass>12.5</mass>
+					<breakImpulse>20.0</breakImpulse>
+					<connectStiffness>200.0</connectStiffness>
+				</element>
+
+				<!-- TrimFrame -->
+				<element type="35">
+					<mass>12.5</mass>
+					<breakImpulse>20.0</breakImpulse>
+					<connectStiffness>200.0</connectStiffness>
+				</element>
+
+				<!-- Panel -->
+				<element type="100">
+					<mass>25</mass>
+					<breakImpulse>4.0</breakImpulse>
+				</element>
+
+				<!-- Housing -->
+				<element type="500">
+					<mass>50</mass>
+					<connectStiffness>350.0</connectStiffness>
+					<connectDamper>1000.0</connectDamper>
+				</element>
+
+				<!-- OutputShaft -->
+				<element type="600">
+					<mass>20</mass>
+					<connectStiffness>350.0</connectStiffness>
+					<connectDamper>1000.0</connectDamper>
+				</element>
+			</Elements>
+
+			<Body>
+				<ccd_threshold>50.0</ccd_threshold>
+				<ccd_radius>0.3</ccd_radius>
+			</Body>
+			<Shape>
+				<Panel>
+					<min_thickness>0.03</min_thickness>
+					<margin>0.01</margin>
+				</Panel>
+				<Disc>
+					<min_thickness>0.05</min_thickness>
+					<margin>0.02</margin>
+				</Disc>
+			</Shape>
+
+			<Joints>
+				<!-- AxisJoint Parametors -->
+				<AxisJoint>
+					<Linear>
+						<erp>0.9</erp>
+						<cfm>0.01</cfm>
+					</Linear>
+					<Rotate>
+						<erp>0.7</erp>
+						<cfm>0.075</cfm>
+					</Rotate>
+				</AxisJoint>
+
+				<!--HingeJoint -->
+				<HingeJoint>
+					<erp>0.9</erp>
+					<cfm>0.01</cfm>
+				</HingeJoint>
+
+				<!-- BrigeLinkJoint -->
+				<LinkJoint>
+					<erp>0.95</erp>
+					<cfm>0.0</cfm>
+				</LinkJoint>
+			</Joints>
+		</Model>
+
+		<Water>
+			<mu>0.5</mu>
+			<density>1020.0</density>
+		</Water>
+		<Land>
+			<margin>0.01</margin>
+		</Land>
+	</Physics>
+</MIZUNUKI>

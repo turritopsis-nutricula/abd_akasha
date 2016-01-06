@@ -1,0 +1,48 @@
+//test
+val{
+  POWER1(default=0,min=-200,max=200,step=50)
+  HANDLE(default=0,min=-20,max=20,step=1)
+  P_ARM(default=0, max=50000, step=50000)
+  P_ARM2(default=0, max=100000, step=100000)
+}
+key{
+  1:POWER1(step=50)
+  0:POWER1(step=-50)
+  2:HANDLE(step=-0.6)
+  3:HANDLE(step=0.6)
+  8:P_ARM(step=50000)
+  9:P_ARM2(step=50000)
+}
+BODY{
+  Core(){
+    N:Chip(){
+      N:Rudder(angle=HANDLE){
+        W:Chip(){
+          W:Wheel(angle=90){ }
+          N:Arm(power=P_ARM, option=50000){ }
+        }
+        E:Chip(){
+          N:Arm(power=P_ARM2, option=100000){ }
+          E:Wheel(angle=90){ }
+        }
+        
+      }
+    }
+
+    S:Chip(){
+        W:Chip(){W:Wheel(angle=90,power=POWER1){ } }
+        E:Chip(){E:Wheel(angle=90,power=-POWER1){ } }
+      }
+    
+
+
+  }}
+  
+
+
+
+Lua
+
+{
+  function test(){ };
+}

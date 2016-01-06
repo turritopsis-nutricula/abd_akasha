@@ -1,0 +1,8 @@
+#ifndef AKASHA_BUILD_CONFIG__HPP__
+#define AKASHA_BUILD_CONFIG__HPP__
+
+#define AKASHA_VERSION_MAJOR @AkashaMajorVersion@
+#define AKASHA_VERSION_MINER @AkashaMinorVersion@
+#define AKASHA_VERSION_HOTFIX @AkashaHotfixVersion@
+
+#endif /* end of include guard */

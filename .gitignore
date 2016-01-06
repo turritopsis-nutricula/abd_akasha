@@ -1,0 +1,21 @@
+
+*.dll
+*.def
+*.a
+*.exe
+tags
+
+# codeblocks
+
+*.depend
+*.bmarks
+*.layout
+obj/
+bin/
+
+# special dir
+_build_/
+_ducuments_/
+
+# dump file
+Win32Akasha/BuildConfig.hpp

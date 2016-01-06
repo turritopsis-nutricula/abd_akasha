@@ -1,0 +1,39 @@
+#ifndef IDC_STATIC
+#define IDC_STATIC (-1)
+#endif
+
+#define IDW_MAIN                                51
+#define IDR_LUA1                                100
+#define IDI_ICON1                               103
+#define IDD_DEBUGCONSOL                         106
+#define IDD_NETWORK_SELECT                      108
+#define IDD_NETWORK_CONSOLE                     110
+#define IDD_VERSION                             114
+#define IDC_NETWORK_CLOSE                       1001
+#define IDC_NETWORK_HISTORY                     1001
+#define IDC_RADIO_SERVER                        1002
+#define IDC_EDIT_CHAT_INPUT                     1003
+#define IDC_RADIO_CLIENT                        1003
+#define IDC_CHAT_SEND                           1004
+#define IDC_NAME_GROUP                          1005
+#define IDC_CONNECTION_GROUP                    1006
+#define IDC_NETWORK_TYPE_GROUP                  1007
+#define IDC_STATIC_ADRESS                       7005
+#define IDC_STATIC_PORT                         7006
+#define IDC_EDIT_ADRESS                         7007
+#define IDC_EDIT_PORT                           7009
+#define IDC_LIST_CHAT                           7011
+#define IDC_LIST_MEMBER                         7012
+#define IDM_FILE_EXIT                           40000
+#define IDM_STATIC_VERSION                      40000
+#define IDM_FILE_OPEN_MODEL                     40001
+#define IDM_FILE_OPEN_LAND                      40002
+#define IDM_VIEW_EXTERN_FORCE                   40003
+#define IDM_VIEW_DEBUG_AABB                     40004
+#define IDM_WINDOW_DEBUG                        40005
+#define IDM_WINDOW_LOG                          40006
+#define IDM_FILE_OPEN_SUBMODEL                  40007
+#define IDC_STATIC_NETWORK_NAME                 40008
+#define IDM_NETWORK_DIALOG                      40008
+#define IDC_EDIT_NETWORK_NAME                   40009
+#define IDM_SHOW_VERSION_DIALOG                 40010

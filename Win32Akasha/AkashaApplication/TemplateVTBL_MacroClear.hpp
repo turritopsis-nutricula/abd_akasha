@@ -1,0 +1,26 @@
+
+
+#undef VTBL_LIST
+#undef EXCUTES_ARGS_OPEN
+#undef EXCUTES_ARGS
+#undef VTBL_LIST_NAME
+#undef VTBL_LIST_RETURN
+#undef VTBL_LIST_ARGS_ARRAY
+#undef VTBL_LIST_ARGS_ARRAY_SIZE
+#undef VTBL_LIST_ARGS
+#undef VTBL_LIST_COMMA
+
+#undef FUNCTION_ARGS_I
+#undef VTBL_LIST_FUNCTION_ARGS
+
+#undef STRUCT_I
+#undef VTBL_STRUCT
+
+#undef EXCUTES
+#undef VTBL_INITALIZER
+
+#undef INIALIZES_I
+#undef VTBL_INIT
+
+//’è‹`ƒtƒ‰ƒO‚ð‰º‚ë‚·
+#undef TEMPLATE_VTBL_LOADED
